@@ -1,0 +1,42 @@
+# EmailMarketer 配置文件
+# 复制此文件为 config.yaml 并填入实际值
+
+# FastAPI 服务
+api:
+  host: "0.0.0.0"
+  port: 8100
+  api_key: "changeme-your-secret-key"  # 请修改为你的密钥
+
+# MCP Server
+mcp:
+  sse_host: "0.0.0.0"
+  sse_port: 8101
+  sse_auth: true
+
+# 数据库
+database:
+  url: "sqlite+aiosqlite:///data/emailmarketer.db"
+  sync_url: "sqlite:///data/emailmarketer.db"
+
+# 追踪系统 (生产环境需改为公网域名)
+tracking:
+  base_url: "http://localhost:8100"
+
+# 默认 SMTP 账户 (可通过API添加更多)
+smtp:
+  default_sender_email: ""
+  default_sender_name: ""
+  default_password: ""
+
+# 弹回检测 IMAP
+bounce:
+  enabled: false
+  imap_host: ""
+  imap_user: ""
+  imap_pass: ""
+  check_interval_minutes: 5
+
+# 调度器
+scheduler:
+  workflow_tick_seconds: 60
+  campaign_check_seconds: 60

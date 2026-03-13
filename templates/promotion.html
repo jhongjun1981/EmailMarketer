@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background: #f4f4f4; }
+.container { max-width: 600px; margin: 0 auto; background: #ffffff; }
+.hero { background: linear-gradient(135deg, #e74c3c, #c0392b); color: #ffffff; padding: 50px 30px; text-align: center; }
+.hero h1 { margin: 0; font-size: 36px; font-weight: bold; }
+.hero .discount { font-size: 60px; font-weight: bold; margin: 15px 0; }
+.hero p { font-size: 16px; opacity: 0.9; }
+.content { padding: 30px; text-align: center; }
+.content p { color: #666; line-height: 1.6; font-size: 16px; }
+.product { display: inline-block; margin: 15px; text-align: center; }
+.product img { width: 150px; height: 150px; object-fit: cover; border-radius: 8px; }
+.product .name { font-weight: bold; color: #333; margin-top: 10px; }
+.product .price { color: #e74c3c; font-size: 18px; font-weight: bold; }
+.cta { padding: 30px; text-align: center; }
+.button { display: inline-block; padding: 16px 48px; background: #e74c3c; color: #ffffff; text-decoration: none; border-radius: 30px; font-size: 18px; font-weight: bold; }
+.countdown { color: #e74c3c; font-size: 14px; margin-top: 15px; }
+.footer { background: #f8f9fa; padding: 20px; text-align: center; font-size: 12px; color: #999; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <h1>{{promo_title}}</h1>
+    <div class="discount">{{discount}}</div>
+    <p>{{promo_subtitle}}</p>
+  </div>
+  <div class="content">
+    <p>Hi {{name}}，{{promo_message}}</p>
+  </div>
+  <div class="cta">
+    <a href="{{shop_url}}" class="button">{{cta_text}}</a>
+    <p class="countdown">{{countdown_text}}</p>
+  </div>
+  <div class="footer">
+    <p>{{company}}</p>
+    <p><a href="{{unsubscribe_url}}" style="color:#999;">退订 / Unsubscribe</a></p>
+  </div>
+</div>
+</body>
+</html>
